@@ -5,6 +5,8 @@ public class User {
     private int birthday;
     private String email;
 
+    // методы для получения значения
+
     public String getFio() {
         return fio;
     }

@@ -43,7 +43,7 @@ public class Box {
         }
     }
 
-
+// методы для получения значения
     public void setColor(String color) {
         this.color = color;
     }

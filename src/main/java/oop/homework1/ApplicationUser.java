@@ -2,6 +2,7 @@ package oop.homework1;
 
 public class ApplicationUser {
     public static void main(String[] args) {
+        // Test User
         User[] users = new User[10];
         User user1 = new User("Федоров Федор Иванович", 1965, "fedor.com");
         User user2 = new User("Владимиров Виктор Викторович", 1978, "vladim.com");
@@ -33,6 +34,7 @@ public class ApplicationUser {
             }
 
         }
+        // Test box
 
         Box box = new Box("20x40", "red");
         System.out.println(box.isOpen());
