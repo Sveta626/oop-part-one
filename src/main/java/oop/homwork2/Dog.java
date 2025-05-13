@@ -13,7 +13,7 @@ public class Dog extends Animal {
             return -1;
         }
         double time = distance/ranningSpeed;
-        endurance = endurance - distance;
+        endurance -= distance;
         return time;
     }
 
@@ -25,7 +25,7 @@ public class Dog extends Animal {
         return -1;
     }
         double time = distance/ranningSpeed;
-        endurance = endurance - distance*2;
+        endurance -= distance*2;
         System.out.println(name + ": проплыл " + distance + " метров за " + (int)time + " секунд");
         return time;
     }

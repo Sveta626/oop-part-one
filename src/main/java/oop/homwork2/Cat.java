@@ -14,7 +14,7 @@ public class Cat extends Animal {
             return -1;
         }
         double time = distance / ranningSpeed;
-        endurance = endurance - distance;
+        endurance -= distance;
         return time;
 
     }

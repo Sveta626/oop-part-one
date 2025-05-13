@@ -9,6 +9,7 @@ public abstract class Animal {
     int endurance;
     boolean isTired;
 
+
     public Animal(String name, double ranningSpeed, double sweemingSpeed, int endurance) {
         this.name = name;
         this.ranningSpeed = ranningSpeed;
@@ -16,6 +17,7 @@ public abstract class Animal {
         this.endurance = endurance;
         this.isTired = false;
     }
+
     public abstract double run(int distance);
     public abstract double swim(int distance);
     public void info(){
