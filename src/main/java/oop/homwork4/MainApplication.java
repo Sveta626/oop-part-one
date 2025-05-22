@@ -1,14 +1,12 @@
 package oop.homwork4;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class MainApplication {
     public static void main(String[] args) {
         Person person = new Person("Иван ", 50);
-        Person person1 = new Person("Федя", 55 );
-        Person person2 = new Person("Вася", 80 );
-        Person person3 = new Person("Миша", 30 );
-
+        Person person1 = new Person("Федя", 55);
+        Person person2 = new Person("Вася", 80);
+        Person person3 = new Person("Миша", 30);
+        Person person4 = new Person("Таня", 40);
 
 
         Car car = new Car();
@@ -18,12 +16,15 @@ public class MainApplication {
 
 
         person.setCurrentTransport(horse);
-        System.out.println(person.move(50,Terrain.FOREST));
-        System.out.println(person1.move(5,Terrain.PLAIN));
+        System.out.println(person.move(50, Terrain.FOREST));
+        System.out.println(person1.move(5, Terrain.PLAIN));
         person2.setCurrentTransport(car);
-        System.out.println(person2.move(100,Terrain.PLAIN));
+        System.out.println(person2.move(100, Terrain.PLAIN));
         person3.setCurrentTransport(atv);
-        System.out.println(person3.move(40,Terrain.SWAMP));
+        System.out.println(person3.move(40, Terrain.SWAMP));
+        person4.setCurrentTransport(bicycle);
+        bicycle.setPerson(person4);
+        System.out.println(person4.move(20, Terrain.PLAIN));
 
 
     }

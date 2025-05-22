@@ -16,13 +16,13 @@ class Car implements Transport {
 
     @Override
     public boolean move(int distance, Terrain terrainType) {
-            if(fuelLevel >= distance * 0.5) {
-                fuelLevel -= distance * 0.5;
-                System.out.println("Машина прошла " + distance + " км. Осталось топлива: " + fuelLevel + "%");
-                return true;
-            } else {
-                System.out.println("Недостаточно топлива для путешествия на такое расстояние.");
-                return false;
-            }
+        if (fuelLevel >= distance * 0.5) {
+            fuelLevel -= distance * 0.5;
+            System.out.println("Машина прошла " + distance + " км. Осталось топлива: " + fuelLevel + "%");
+            return true;
+        } else {
+            System.out.println("Недостаточно топлива для путешествия на такое расстояние.");
+            return false;
+        }
     }
 }

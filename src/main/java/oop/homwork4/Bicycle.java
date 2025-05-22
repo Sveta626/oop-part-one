@@ -1,7 +1,7 @@
 package oop.homwork4;
 
 class Bicycle implements Transport {
-   private Person person;
+    private Person person;
 
 
     public void setPerson(Person person) {
@@ -21,13 +21,13 @@ class Bicycle implements Transport {
 
     @Override
     public boolean move(int distance, Terrain terrainType) {
-            if(person.getPower() >= distance * 0.5) {
-                person.setPower((int) (person.getPower() - distance * 0.5));
-                System.out.println("Велосипед проехал " + distance + " км. Осталось сил: " + person.getPower() + "%");
-                return true;
-            } else {
-                System.out.println("Недостаточно сил " + person.getName() + " для путешествия на такое расстояние.");
-                return false;
-            }
+        if (person.getPower() >= distance * 0.5) {
+            person.setPower((int) (person.getPower() - distance * 0.5));
+            System.out.println("Велосипед проехал " + distance + " км. Осталось сил: " + person.getPower() + "%");
+            return true;
+        } else {
+            System.out.println("Недостаточно сил " + person.getName() + " для путешествия на такое расстояние.");
+            return false;
+        }
     }
 }
