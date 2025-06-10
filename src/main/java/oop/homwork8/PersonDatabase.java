@@ -1,9 +1,12 @@
 package oop.homwork8;
 
+import java.util.EnumSet;
 import java.util.Map;
+import java.util.Set;
 
 public class PersonDatabase {
     private Map<Long, Person> persons;
+    private Set<Position> managerPosition = EnumSet.of(Position.MANAGER, Position.BRANCH_DIRECTOR, Position.SENIOR_MANAGER, Position.DIRECTOR);
 
     public PersonDatabase(Map<Long, Person> persons) {
         this.persons = persons;
@@ -19,19 +22,7 @@ public class PersonDatabase {
     }
 
     public boolean isManager(Person person) {
-        if (person != null) {
-            switch (person.getPosition()) {
-                case MANAGER:
-                case DIRECTOR:
-                case BRANCH_DIRECTOR:
-                case SENIOR_MANAGER:
-                    return true;
-                default:
-                    return false;
-
-            }
-        }
-        return false;
+        return managerPosition.contains(person.getPosition());
     }
 
     public boolean isEmployee(long id) {
